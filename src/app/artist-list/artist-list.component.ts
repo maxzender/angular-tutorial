@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artist-list.component.css']
 })
 export class ArtistListComponent implements OnInit {
+  artists: string[];
 
   constructor() { }
 
   ngOnInit() {
+    this.artists = [
+      "Pink Floyd",
+      "Led Zeppelin",
+      "Prince"
+    ];
   }
 
 }
