@@ -1,3 +1,5 @@
 <ul>
-  <li *ngFor="let artist of artists">{{ artist }}</li>
+  <li *ngFor="let artist of artists; let id = index;">
+    <a [routerLink]="['/artists', id]">{{ artist }}</a>
+  </li>
 </ul>
