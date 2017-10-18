@@ -9,11 +9,10 @@ import { ArtistService } from '../artist.service';
 export class ArtistListComponent implements OnInit {
   artists: string[];
 
-  constructor() { }
+  constructor(private service: ArtistService) { }
 
   ngOnInit() {
-    const service = new ArtistService();
-    this.artists = service.getArtists();
+    this.artists = this.service.getArtists();
   }
 
 }
