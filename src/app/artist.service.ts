@@ -12,6 +12,10 @@ export class ArtistService {
     ];
   }
 
+  getArtist(id: number): string {
+    return this.artists[id];
+  }
+
   getArtists(): string[] {
     return this.artists;
   }
