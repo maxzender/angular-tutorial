@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArtistService } from '../artist.service';
 
 @Component({
   selector: 'app-artist-list',
@@ -11,11 +12,8 @@ export class ArtistListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.artists = [
-      "Pink Floyd",
-      "Led Zeppelin",
-      "Prince"
-    ];
+    const service = new ArtistService();
+    this.artists = service.getArtists();
   }
 
 }
